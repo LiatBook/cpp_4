@@ -1,6 +1,3 @@
-Certainly Below is a revised version of your project description, formatted in a style suitable for inclusion in a README.md file. This version aims to clearly present the project's purpose, features, and capabilities in a structured and engaging manner.
-
----
 
 # Tree Visualization with SFML and Complex Numbers
 
