@@ -4,7 +4,7 @@ Certainly Below is a revised version of your project description, formatted in a
 
 # Tree Visualization with SFML and Complex Numbers
 
-![Tree Visualization Screenshot](path/to/screenshot.png)
+![Tree Visualization Screenshot](image.png)
 
 Welcome to our Tree Visualization project, a cutting-edge tool developed with SFML (Simple and Fast Multimedia Library) in C++. This project stands out by incorporating complex numbers within the tree nodes, offering a unique perspective on mathematical concepts through interactive visualization.
 
@@ -23,25 +23,3 @@ Our project introduces a versatile Tree data structure that is templated to work
 ## Getting Started
 
 To start working with this project, ensure you have SFML installed and properly configured in your development environment. Detailed installation instructions can be found on the [SFML website](https://www.sfml-dev.org/tutorials/2.5/start.php).
-
-## Usage
-
-Once your environment is set up, clone the repository and compile the project. Running the resulting executable will launch the application, allowing you to explore the tree structure interactively.
-
-## Contributing
-
-We invite contributions from the community. Whether you're looking to enhance existing features, propose new additions, or fix bugs, please consider submitting a pull request. For guidance on contributing, refer to our [CONTRIBUTING.md](CONTRIBUTING.md) file.
-
-## License
-
-This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for full details.
-
-## Contact
-
-For questions, feedback, or collaboration opportunities, please reach out via email at your-email@example.com or connect with us on [Twitter](https://twitter.com/yourhandle).
-
----
-
-This README provides a comprehensive introduction to the project, detailing its innovative aspects and practical applications. It guides potential users and contributors through the process of getting started, using the project, and participating in its development.
-
-Citations:
