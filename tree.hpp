@@ -11,7 +11,6 @@ class Tree{
     Node<T>* root;
 
 
-
       void renderNode(Node<T>* node, sf::RenderWindow& window, float x, float y, float xOffset) {
         if (!node)
             return;
