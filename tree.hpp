@@ -16,7 +16,7 @@ class Tree{
             return;
 
         // Draw node (example: circle)
-        sf::CircleShape circle(50.f);
+        sf::CircleShape circle(20.f);
         circle.setFillColor(sf::Color::Blue);
         circle.setPosition(x, y);
         window.draw(circle);

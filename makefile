@@ -1,46 +1,41 @@
-# # Compiler to use
-# CXX = g++
+# Compiler and flags
+CXX = g++
+CXXFLAGS = -std=c++2a -Wall -Wextra
 
-# # Compiler flags
-# CXXFLAGS = -std=c++11 -Wall -Wextra
+# SFML include and library paths
+SFML_INCLUDE = -I/Users/your_username/SFML/include
+SFML_LIBS = -lsfml-graphics -lsfml-window -lsfml-system
 
-# # Name of the executable
-# TARGET = demo
+# Source files
+MAIN_SRCS = main.cpp
+TEST_SRCS = Test.cpp
 
-# # Source files
-# SRCS = Demo.cpp
+# Object files
+MAIN_OBJS = $(MAIN_SRCS:.cpp=.o)
+TEST_OBJS = $(TEST_SRCS:.cpp=.o)
 
-# # Object files
-# OBJS = $(SRCS:.cpp=.o)
+# Executable names
+DEMO_TARGET = main
+TEST_TARGET = test
 
-# SFML_FLAGS = -lsfml-graphics -lsfml-window -lsfml-system  
+# Default target (no longer building demo by default)
+all: $(TEST_TARGET)
 
-# all: $(TARGET)
+# Link the main program (tree)
+tree: $(MAIN_OBJS)
+	$(CXX) $(CXXFLAGS) $(SFML_INCLUDE) $^ -o $@ $(SFML_LIB) $(SFML_LIBS)
+	./$@
 
-# $(TARGET): $(OBJS)
-# 	$(CXX) $(CXXFLAGS) $(SFML_FLAGS) -o $(TARGET) $(OBJS)
+# Link the test program
+test: TestCounter.o Test.o $(TEST_OBJS)
+	$(CXX) $(CXXFLAGS) $(SFML_INCLUDE) $^ -o $@ $(SFML_LIB) $(SFML_LIBS)
+	./$@
 
-# .cpp.o:
-# 	$(CXX) $(CXXFLAGS) -c $<  -o $@
-
-# clean:
-# 	$(RM) $(OBJS) $(TARGET) Test.o TestCounter.o 
-
-CC = g++
-CFLAGS = -std=c++11 -Wall -Wextra
-LIBS = -lsfml-graphics -lsfml-window -lsfml-system
-
-SRCS = main.cpp
-OBJS = $(SRCS:.cpp=.o)
-EXEC = main
-
-all: $(EXEC)
-
-$(EXEC): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBS) -o $(EXEC)
-
+# Compile source files into object files
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) $(SFML_INCLUDE) -c $< -o $@
 
+# Clean up generated files
 clean:
-	rm -f $(OBJS) $(EXEC) 
+	rm -f $(MAIN_OBJS) $(TEST_OBJS) $(DEMO_TARGET) $(TEST_TARGET) TestCounter.o tree tree.o
+
