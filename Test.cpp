@@ -11,7 +11,7 @@ using std::string;
 
 TEST_CASE("PreOrderIterator") {
     // Create a tree with nodes allocated on heap
-    Tree<int> tree;
+    
     Node<int> node1(1);
     Node<int> node2(2);
     Node<int> node3(3);
@@ -19,7 +19,7 @@ TEST_CASE("PreOrderIterator") {
     Node<int> node5(5);
     Node<int> node6(6);
     Node<int> node7(7);
-
+    Tree<int> tree;
     // Construct the tree
     tree.add_root(&node1);
     tree.add_sub_node(&node1, &node2);
@@ -48,7 +48,7 @@ TEST_CASE("PreOrderIterator") {
 
 TEST_CASE(" Post/In/Pre Iterator when number of child>2 ->DFS")
 {
-    Tree<string,8> tree;
+    
     Node<string> node0("name");
     Node<string> node1("l");
     Node<string> node2("i");
@@ -58,7 +58,7 @@ TEST_CASE(" Post/In/Pre Iterator when number of child>2 ->DFS")
     Node<string> node6("o");
     Node<string> node7("o");
     Node<string> node8("k");
-
+    Tree<string,8> tree;
     // Construct the tree
     tree.add_root(&node0);
     tree.add_sub_node(&node0, &node1);
@@ -94,11 +94,11 @@ TEST_CASE(" Post/In/Pre Iterator when number of child>2 ->DFS")
 
 TEST_CASE(" InOrderIterator ")
 {
-    Tree<string,2> tree;
+    
     Node<string> node0("l");
     Node<string> node1("name:");
     Node<string> node2("i");
-
+     Tree<string,2> tree;
     // Construct the tree
     tree.add_root(&node0);
     tree.add_sub_node(&node0, &node1);
@@ -115,11 +115,12 @@ TEST_CASE(" InOrderIterator ")
 
 TEST_CASE(" BFSIterator for binary tree")
 {
-    Tree<double,2> tree;
+    
     Node<double> node0(1.1);
     Node<double> node1(1.2);
     Node<double> node2(1.3);
 
+    Tree<double,2> tree;
     // Construct the tree
     tree.add_root(&node0);
     tree.add_sub_node(&node0, &node1);
@@ -136,11 +137,11 @@ TEST_CASE(" BFSIterator for binary tree")
 
 TEST_CASE(" TRY TO ADD MORE CHILD WHEN NUM OF CHILD IN MAX (1)")
 {
-    Tree<double,1> tree;
+    
     Node<double> node0(1.1);
     Node<double> node1(1.2);
     Node<double> node2(1.3);
-
+    Tree<double,1> tree;
     tree.add_root(&node0);
     tree.add_sub_node(&node0, &node1);
     CHECK_THROWS(tree.add_sub_node(&node0, &node2));
@@ -148,12 +149,12 @@ TEST_CASE(" TRY TO ADD MORE CHILD WHEN NUM OF CHILD IN MAX (1)")
 }
 TEST_CASE(" TRY TO ADD MORE CHILD WHEN NUM OF CHILD IN MAX (2)")
 {
-    Tree<double,2> tree;
+    
     Node<double> node0(1.1);
     Node<double> node1(1.2);
     Node<double> node2(1.3);
     Node<double> node3(1.4);
-
+    Tree<double,2> tree;
     tree.add_root(&node0);
     tree.add_sub_node(&node0, &node1);
     tree.add_sub_node(&node0, &node2);
@@ -163,13 +164,13 @@ TEST_CASE(" TRY TO ADD MORE CHILD WHEN NUM OF CHILD IN MAX (2)")
 
 TEST_CASE(" BFSIterator for not binary tree")
 {
-    Tree<double,3> tree;
+    
     Node<double> node0(1.1);
     Node<double> node1(1.2);
     Node<double> node2(1.3);
     Node<double> node3(1.4);
     Node<double> node4(1.5);
-
+    Tree<double,3> tree;
     // Construct the tree
     tree.add_root(&node0);
     tree.add_sub_node(&node0, &node1);
@@ -237,13 +238,13 @@ TEST_CASE("Node -add child/get child")
 
 TEST_CASE("MinHeapIterator for heap tree") 
 {
-    Tree<int, 2> tree;
+    
     Node<int> node1(1);
     Node<int> node2(2);
     Node<int> node3(3);
     Node<int> node4(4);
     Node<int> node5(5);
-
+    Tree<int, 2> tree;
     // Construct the heap tree
     tree.add_root(&node1);
     tree.add_sub_node(&node1, &node2);

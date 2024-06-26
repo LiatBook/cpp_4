@@ -12,8 +12,6 @@ int main()
      sf::RenderWindow window(sf::VideoMode(800, 600), "EX4 - Binary-Tree Visualization");
     // Create a root node with a complex number
     Node<Complex> root_node = Node<Complex>(Complex(1.1, 2.2));
-    Tree<Complex> tree; // Binary tree that contains Complex numbers.
-    tree.add_root(&root_node);
 
     // Create additional nodes with complex numbers
     Node<Complex> n1 = Node<Complex>(Complex(1.2, 2));
@@ -21,6 +19,8 @@ int main()
     Node<Complex> n3 = Node<Complex>(Complex(1, 2));
     Node<Complex> n4 = Node<Complex>(Complex(1, 2));
     Node<Complex> n5 = Node<Complex>(Complex(1.6, 2.7));
+    Tree<Complex> tree; // Binary tree that contains Complex numbers.
+    tree.add_root(&root_node);
 
     // Add sub-nodes to the tree
     tree.add_sub_node(&root_node, &n1);
@@ -92,8 +92,6 @@ int main()
     sf::RenderWindow window2(sf::VideoMode(800, 600), "EX4 - Fournary-Tree Visualization");
     // Create a root node with a complex number
     Node<Complex> root_node2 = Node<Complex>(Complex(1, 2));
-    Tree<Complex,4> tree2; // Binary tree that contains Complex numbers.
-    tree2.add_root(&root_node2);
 
     // Create additional nodes with complex numbers
     Node<Complex> n12 = Node<Complex>(Complex(1, 3));
@@ -101,7 +99,9 @@ int main()
     Node<Complex> n32 = Node<Complex>(Complex(1, 5));
     Node<Complex> n42 = Node<Complex>(Complex(1, 6));
     Node<Complex> n52 = Node<Complex>(Complex(1, 7));
+    Tree<Complex,4> tree2; // Binary tree that contains Complex numbers.
 
+    tree2.add_root(&root_node2);
     // Add sub-nodes to the tree
     tree2.add_sub_node(&root_node2, &n12);
     tree2.add_sub_node(&root_node2, &n22);
