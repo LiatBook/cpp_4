@@ -1,3 +1,4 @@
+#bookliat@gmail.com
 # Compiler and flags
 CXX = g++
 CXXFLAGS = -std=c++2a -g -Wall -Wextra
