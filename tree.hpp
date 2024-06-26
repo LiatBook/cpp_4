@@ -357,7 +357,5 @@ void myHeap(Node<T>* root) {
     // Heapify the current node
     make_heap(root);
 }
-
-
     
 };

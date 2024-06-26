@@ -120,33 +120,6 @@ public:
     }
 };
 
-// template<typename T>
-// class MinHeapIterator {
-// private:
-//     std::vector<T>& heap;
-//     size_t index;
-
-// public:
-//     MinHeapIterator(std::vector<T>& h, size_t idx) : heap(h), index(idx) {}
-
-//     T& operator*() const {
-//         return heap[index];
-//     }
-
-//     T* operator->() const {
-//         return &heap[index];
-//     }
-
-//     MinHeapIterator& operator++() {
-//         ++index;
-//         return *this;
-//     }
-
-//     bool operator!=(MinHeapIterator& other) const {
-//         return index != other.index;
-//     }
-// };
-
 
 template<typename T>
 class TREE_BFSIterator {

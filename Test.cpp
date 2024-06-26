@@ -44,8 +44,6 @@ TEST_CASE("PreOrderIterator") {
    
 }
 
-
-
 TEST_CASE(" Post/In/Pre Iterator when number of child>2 ->DFS")
 {
     
@@ -188,7 +186,7 @@ TEST_CASE(" BFSIterator for not binary tree")
 }
 
 
-TEST_CASE("Node -get value")
+TEST_CASE("Node: get value")
 {
     Node<int> node1(1);
     Node<int> node2(2);
@@ -204,7 +202,7 @@ TEST_CASE("Node -get value")
 }
 
 
-TEST_CASE("Node -add child/get child")
+TEST_CASE("Node: add child/get child")
 {
     Node<int> node1(1);
     Node<int> node2(2);

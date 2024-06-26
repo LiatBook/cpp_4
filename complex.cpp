@@ -60,15 +60,7 @@
         return !(*this == other);
     }
 
-    // פונקציה סטטית ליצירת מספר מרוכב ממספר רגיל
-    Complex Complex::fromReal(double r) {
-        return Complex(r, 0);
-    }
-
-    // פונקציה סטטית ליצירת מספר מרוכב ממספר דמי
-    Complex Complex::fromImaginary(double i) {
-        return Complex(0, i);
-    }
+  
     bool Complex::operator<(const Complex& other) {
     double mag1 = std::sqrt(real * real + imag * imag);
     double mag2 = std::sqrt(other.real * other.real + other.imag * other.imag);
